@@ -61,7 +61,7 @@ public class MarioScript : MonoBehaviour
 
     
 
-    private void FixedUpdate()
+    private void FixedUpdate()//se ejecuta mas veces
     {
         bool grnd=IsGrounded();
         if(dir != Vector2.zero)
