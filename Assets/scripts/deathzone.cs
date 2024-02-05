@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class deathzone : MonoBehaviour
 {
@@ -18,8 +19,12 @@ public class deathzone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)//Lo que hace es que destruye caulquiero objeto que tenga asignado el gameObject
 
     {
-        Destroy(collision.gameObject);
+       if(collision.GetComponent<MarioScript>())
+        {
+            GameManager.instance.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
+    
 }
 
 

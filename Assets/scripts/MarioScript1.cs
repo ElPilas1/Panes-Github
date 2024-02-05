@@ -14,6 +14,7 @@ public class MarioScript : MonoBehaviour
     private Vector2 dir;
     private bool isJumping = false;
     private Animator _animator;
+    public AudioClip jumpClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +81,7 @@ public class MarioScript : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce * rb.gravityScale*rb.drag,ForceMode2D.Impulse);
             isJumping = false;
             _animator.Play("walk");
-
+            AudioManager.instance.PlayAudio(jumpClip, "jumpSound");
         }
         print(IsGrounded());
     }

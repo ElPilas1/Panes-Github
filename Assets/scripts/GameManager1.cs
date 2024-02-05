@@ -56,9 +56,15 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        AudioManager.instance.ClearAudios();
         SceneManager.LoadScene(sceneName);
+         
     }
-
+    public void ExitGame()
+    {
+        Debug.Log("Exit!!");
+        Application.Quit();
+    }
 
 
 
