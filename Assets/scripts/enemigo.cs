@@ -32,9 +32,9 @@ public class enemigo : MonoBehaviour
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.GetComponent<MarioScript>())//lo que se choca con el enemgio es el personaje
-       
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (collision.gameObject.GetComponent<MarioScript>())//lo que se choca con el enemgio es el personaje
+
+            GameManager.instance.LoadScene("SampleScene");
 
         }
 
