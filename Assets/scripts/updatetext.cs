@@ -18,10 +18,10 @@ public class updatetext : MonoBehaviour
         switch(variables)
         {
             case GameManager.GameManagerVariables.TIME:
-                TextComponent.text = "Time" + GameManager.instance.GetTime();
+                TextComponent.text = "Time " + GameManager.instance.GetTime().ToString("#.##");
                 break;
                 case GameManager.GameManagerVariables.POINTS:
-                TextComponent.text = "Time" + GameManager.instance.GetPoints();
+                TextComponent.text = "points " + GameManager.instance.GetPoints();
                 break;
         }
     }
